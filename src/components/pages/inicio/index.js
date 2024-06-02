@@ -95,7 +95,7 @@ function Inicio() {
             </div>
             <div className="info">
                 <div className='magem'>
-                    <h2 className='titulo'>Sua pesquisa sobre a COVID-19</h2>
+                    <h2 className='titulo'>Portal COVID-19 - Sua pesquisa sobre a COVID-19</h2>
                     <div className='div-container'>
                         <div className='div-mapa'>
                             <Mapa />
