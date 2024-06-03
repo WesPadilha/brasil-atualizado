@@ -1,11 +1,21 @@
 .panel {
-    position: absolute;
-    margin-left: 900px;
-    width: 600px;
-    height: 350px;
-    background-color: white;
+    position: fixed; /* Garante que o painel fique fixo na tela */
+    top: 220px; /* Posiciona o painel abaixo do cabeçalho */
+    left: 58%;
+    transform: translateX(-50%);
+    width: 600px; /* Largura fixa */
+    max-width: 50%; /* Limita a largura máxima para não ultrapassar 50% da tela */
+    height: auto; /* Altura ajustável automaticamente ao conteúdo */
+    max-height: calc(400px - 50px); /* Altura máxima ajustável */
+    background-color: #fff;
     display: flex;
     flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; /* Permite rolagem vertical dentro do painel */
+    z-index: 1000; /* Certifica que o painel esteja acima de outros elementos */
+    border: 1px solid #ddd; /* Bordas do painel */
 }
 
 .close-btn {
@@ -15,8 +25,10 @@
     color: white;
     cursor: pointer;
     font-size: 20px;
-    padding: 10px;
+    padding: 5px 10px;
     border-radius: 50%;
+    transition: background 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombreamento */
 }
 
 .close-btn:hover {
@@ -24,23 +36,26 @@
 }
 
 .panel-content {
-    overflow-y: auto;
     margin-top: 10px;
 }
 
 .panel h1 {
     margin-bottom: 10px;
     font-size: 24px;
+    color: #333;
 }
 
 .panel h2 {
     margin-top: 0;
     font-size: 20px;
+    color: #666;
 }
 
 .info {
     text-align: center;
     margin-bottom: 20px;
+    font-size: 16px;
+    color: #444;
 }
 
 .data-section {
@@ -58,45 +73,58 @@
 }
 
 .data-section > div {
-    margin: 10px 0;
+    margin: 10px;
     text-align: center;
 }
 
 .divisoria {
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .divisoria > div {
     flex: 1;
-    margin-right: 10px; /* Adicione margem para separar as divs */
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .divisoria > div:last-child {
-    margin-right: 0; /* Remove a margem da última div */
+    margin-right: 0;
 }
 
 .chart-container {
-    width: 300px;
-    height: 300px;
-    margin-bottom: 50px;
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    margin: 0 auto 20px auto; /* Centralizando e adicionando espaçamento inferior */
+    border: 1px solid #ddd; /* Adicionando borda */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombreamento */
 }
 
 .chart-container-all {
-    width: 700px;
+    width: 100%;
+    max-width: 700px;
     height: 400px;
-    margin-bottom: 50px;
-    margin: auto;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ddd; /* Adicionando borda */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombreamento */
 }
 
 .pizza-container {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 50px;
+    width: 170%;
+    max-width: 500px;
+    height: 350px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ddd; /* Adicionando borda */
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombreamento */
 }
-
 
 .loading, .error {
     text-align: center;
@@ -108,7 +136,9 @@
 @media (max-width: 768px) {
     .panel {
         width: 90%;
-        right: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 15px;
     }
 
     .panel h1 {
@@ -124,7 +154,21 @@
         padding: 8px;
     }
 
-    .chart-container {
-        max-width: 100%;
+    .chart-container, .chart-container-all, .pizza-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .divisoria {
+        flex-direction: column;
+    }
+
+    .divisoria > div {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .divisoria > div:last-child {
+        margin-bottom: 0;
     }
 }

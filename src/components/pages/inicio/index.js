@@ -88,9 +88,7 @@ function Inicio() {
                             ))}
                         </select>
                     </div>
-                    <div>
-                        <NavLink to={'/logar'}>Entrar</NavLink>
-                    </div>
+                    
                 </div>
             </div>
             <div className="info">
@@ -101,8 +99,15 @@ function Inicio() {
                             <Mapa />
                         </div>
                         <div className='descricao'>
-                            <p>Seja bem-vindo ao Brasil Atualizado, a sua fonte confiável para acompanhar os números referentes aos casos de COVID-19 em todo o país. Abaixo, você encontrará uma barra de pesquisa que permite selecionar um estado específico do Brasil, resultando em gráficos de colunas detalhados. Além disso, ao clicar no estado desejado no mapa interativo ao lado, você será redirecionado para um painel abrangente que apresenta os dados em formato de gráfico de pizza e numérico. Utilizando os filtros disponíveis, é possível segmentar os dados por região, oferecendo uma análise mais precisa e detalhada. Explore as informações atualizadas e mantenha-se informado sobre a situação da COVID-19 em todo o território nacional.</p>
-                        </div>
+    <p><strong>Bem-vindo ao Portal Covid!</strong> Encontre informações detalhadas sobre os casos de COVID-19 em todo o país.</p>
+    <p>Use a barra de pesquisa ou o mapa interativo para selecionar um estado e acessar gráficos detalhados.</p>
+    <p>Clique no mapa para visualizar painéis com gráficos de pizza e dados numéricos.</p>
+    <p>Utilize os filtros para segmentar dados por região e obter uma análise precisa, ou digite <strong>todos</strong> no campo de pesquisa, pra ter uma visao de todos os estados</p>
+    <p>Mantenha-se informado sobre a situação da COVID-19 no Brasil.</p>
+</div>
+
+
+
                     </div>
                     <CovidData region={regionFilter} state={stateFilter} date={dateFilter} />
                 </div>
