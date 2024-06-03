@@ -1,5 +1,5 @@
 .panel {
-    position: fixed; /* Garante que o painel fique fixo na tela */
+    position: absolute; /* Garante que o painel fique fixo na tela */
     top: 290px; /* Posiciona o painel abaixo do cabeçalho */
     left: 64%; /* Centraliza horizontalmente */
     transform: translateX(-50%);
@@ -12,7 +12,6 @@
     flex-direction: column;
     padding: 20px;
     overflow-y: auto; /* Permite rolagem vertical dentro do painel */
-    z-index: 1000; /* Certifica que o painel esteja acima de outros elementos */
     border: none; /* Remove a borda */
     box-shadow: none; /* Remove a sombra */
     border-radius: 0; /* Remove as bordas arredondadas */

@@ -72,7 +72,7 @@ function Inicio() {
                 <div className={`menu ${menuOpen ? 'show' : ''}`}>
                     <div className='div-filtros'>
                         <h2 className='cor-espaco'>-------------------------</h2>
-                        <h3>Região</h3>
+                        <h3 className='cor-espaco'>Região</h3>
                         <select name="region" className="borda-filtro" onChange={handleRegionChange}>
                             <option value="">Selecione a região</option>
                             {Object.keys(regions).map(region => (
@@ -80,7 +80,7 @@ function Inicio() {
                             ))}
                         </select>
                         <h2 className='cor-espaco'>-------------------------</h2>
-                        <h3>Estado</h3>
+                        <h3 className='cor-espaco'>Estado</h3>
                         <select name="state" className="borda-filtro" onChange={handleStateChange} value={stateFilter}>
                             <option value="">Selecione o estado</option>
                             {filteredStates.map((state) => (
